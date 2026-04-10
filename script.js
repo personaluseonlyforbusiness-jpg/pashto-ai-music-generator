@@ -4,7 +4,7 @@ document.getElementById("generateBtn").addEventListener("click", async function(
   const style = document.getElementById("style").value;
 
   // Send request to backend
-  const response = await fetch("http://localhost:3000/generate", {
+  const response = await fetch("/api/generate-song", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ lyrics, style })
